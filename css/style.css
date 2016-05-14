@@ -1,3 +1,5 @@
+body{font-family: 'Lato', sans-serif;}
+
 .container {
 	max-width: 1200px;
 	margin: auto;
@@ -27,14 +29,19 @@ h3 {
 /*** Header style ***/
 header {
   background-color: #e3e3e3; /* QUITAR */
+  height: 700px;
 }
 
 nav {
+	position: fixed;
+	width:100%;
   background-color: #444;
   color: white;
   font-size: 24px;
   overflow: auto;
   padding: 20px 0px;
+  text-transform: uppercase;
+  z-index: 1;
 }
 
 nav ul {
@@ -46,11 +53,11 @@ nav ul li {
 }
 
 .title {
-	padding: 100px 0;
+	padding: 200px 0
 }
 
 .title h1 {
-	padding: 20px 0;
+	padding: 40px 0;
 }
 
 /*** Project section ***/
@@ -73,6 +80,11 @@ nav ul li {
 }
 
 /*** About ***/
+.about, footer {
+  background-color: #394450;
+	color: white;
+}
+
 .about .img-profile {
 	width: 30%
 }
@@ -89,6 +101,7 @@ nav ul li {
 
 
 /*** FORM CONTACT ***/
+
 .contact .form, footer article {
   display: inline-block;
   width: 49%;
@@ -118,15 +131,83 @@ nav ul li {
 	margin-bottom: 45px;
 }
 
-.btn{
+.contact .btn {
     width: 115px;
     height: 40px;
     font-size: 24px;
     margin-top: 25px;
 }
 
+/*** footer **/
+footer {
+	font-size: 24px;
+}
+
+.iconos {
+	font-size: 40px;
+	margin-right: 10px;
+}
 
 
 
+@media screen and (max-width: 768px) {
+
+	.container {
+		max-width: 755px;
+	}
+
+	.project article {
+		width: 49%;
+	}
+
+	.contact .form {
+		display: block;
+		width: 100%;
+	}
+
+	.contact .form textarea {
+		width: 90%;
+	}
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+	.container {
+		max-width: 365px;
+	}
+
+	nav ul {
+		float: none;
+	}
+
+	nav ul li {
+		display: block;
+		margin-top: 5px;
+	}
+
+	.project article {
+		width: 100%;
+	}
+
+	.about img {
+		display: none;
+	}
+
+	.about .desc-profile {
+		padding: 0;
+	}
+
+	footer article {
+		display: block;
+		width: 100%;
+	}
+
+	footer ul {
+		margin-top: 15px;
+	}
+
+}
 
 
